@@ -126,8 +126,7 @@ Convert promotional offers and odds boosts into guaranteed profit using our adva
 
 Our users consistently outperform the market:
 - **73% of users** report increased profitability within 30 days
-- **$2.3M+** in combined user profits last year
-- **15,000+** active users across 30+ states
+- **5,000+** active users across 30+ states
 - **4.8/5** average user satisfaction rating
 
 ## Getting Started
