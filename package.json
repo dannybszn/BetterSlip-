@@ -1,0 +1,12 @@
+{
+  "name": "betterslip-public",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Public content for BetterSlip SEO",
+  "scripts": {
+    "fetch-blogs": "node fetch-blog-content.js"
+  },
+  "dependencies": {
+    "seobot": "^1.3.0"
+  }
+}
