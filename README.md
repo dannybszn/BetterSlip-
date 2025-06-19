@@ -10,7 +10,7 @@ BetterSlip is a comprehensive sports betting analytics platform that empowers bo
 
 ### Our Mission
 
-To democratize sports betting intelligence by providing transparent, data-driven insights that help bettors make informed decisions and achieve consistent profitability.
+To empower serious bettors with professional-grade sports betting intelligence through advanced AI technology, comprehensive data analysis, and sophisticated tools that deliver consistent profitability.
 
 ## Core Features
 
