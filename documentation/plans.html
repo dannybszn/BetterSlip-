@@ -86,17 +86,28 @@
             </div>
 
             <h2>Choose Your Plan</h2>
+            
+            <div class="pricing-toggle-container">
+                <div class="pricing-toggle">
+                    <button class="toggle-btn active" data-period="monthly">Monthly</button>
+                    <button class="toggle-btn" data-period="weekly">Weekly</button>
+                </div>
+                <div class="savings-badge">Save up to 31% with yearly billing</div>
+            </div>
 
             <div class="plans-container">
                 <div class="plan-card">
                     <div class="plan-header">
-                        <h3>🥉 Bronze Plan</h3>
+                        <h3>🥉 Bronze</h3>
                         <div class="plan-price">
-                            <span class="price-amount">$9.99</span>
-                            <span class="price-period">/week</span>
+                            <span class="price-amount monthly-price">$19.99</span>
+                            <span class="price-amount weekly-price" style="display: none;">$9.99</span>
+                            <span class="price-period monthly-period">/month</span>
+                            <span class="price-period weekly-period" style="display: none;">/week</span>
                         </div>
                         <div class="plan-billing">
-                            <p>$19.99/month • $199.99/year</p>
+                            <p class="monthly-billing">Billed monthly • $199.99/year (save 17%)</p>
+                            <p class="weekly-billing" style="display: none;">Billed weekly • $199.99/year</p>
                             <span class="no-trial">No trial - Charged today</span>
                         </div>
                     </div>
@@ -111,20 +122,23 @@
                         </ul>
                     </div>
                     <div class="plan-action">
-                        <a href="https://betterslip.com/plans" class="plan-button" target="_blank">Choose Bronze</a>
+                        <a href="https://betterslip.com/plans" class="plan-button" target="_blank">Get Bronze</a>
                     </div>
                 </div>
 
                 <div class="plan-card featured">
                     <div class="popular-badge">Most Popular</div>
                     <div class="plan-header">
-                        <h3>🥇 Gold Plan</h3>
+                        <h3>🥇 Gold</h3>
                         <div class="plan-price">
-                            <span class="price-amount">$44.99</span>
-                            <span class="price-period">/week</span>
+                            <span class="price-amount monthly-price">$119.99</span>
+                            <span class="price-amount weekly-price" style="display: none;">$44.99</span>
+                            <span class="price-period monthly-period">/month</span>
+                            <span class="price-period weekly-period" style="display: none;">/week</span>
                         </div>
                         <div class="plan-billing">
-                            <p>$119.99/month • $999.99/year</p>
+                            <p class="monthly-billing">Billed monthly • $999.99/year (save 31%)</p>
+                            <p class="weekly-billing" style="display: none;">Billed weekly • $999.99/year</p>
                             <span class="trial-included">7-day free trial</span>
                         </div>
                     </div>
@@ -139,19 +153,22 @@
                         </ul>
                     </div>
                     <div class="plan-action">
-                        <a href="https://betterslip.com/plans" class="plan-button featured" target="_blank">Choose Gold</a>
+                        <a href="https://betterslip.com/plans" class="plan-button featured" target="_blank">Get Gold</a>
                     </div>
                 </div>
 
                 <div class="plan-card">
                     <div class="plan-header">
-                        <h3>💎 Platinum Plan</h3>
+                        <h3>💎 Platinum</h3>
                         <div class="plan-price">
-                            <span class="price-amount">$75.00</span>
-                            <span class="price-period">/week</span>
+                            <span class="price-amount monthly-price">$200.00</span>
+                            <span class="price-amount weekly-price" style="display: none;">$75.00</span>
+                            <span class="price-period monthly-period">/month</span>
+                            <span class="price-period weekly-period" style="display: none;">/week</span>
                         </div>
                         <div class="plan-billing">
-                            <p>$200.00/month • $2,000.00/year</p>
+                            <p class="monthly-billing">Billed monthly • $2,000.00/year (save 17%)</p>
+                            <p class="weekly-billing" style="display: none;">Billed weekly • $2,000.00/year</p>
                             <span class="trial-included">7-day free trial</span>
                         </div>
                     </div>
@@ -167,7 +184,7 @@
                         </ul>
                     </div>
                     <div class="plan-action">
-                        <a href="https://betterslip.com/plans" class="plan-button" target="_blank">Choose Platinum</a>
+                        <a href="https://betterslip.com/plans" class="plan-button" target="_blank">Get Platinum</a>
                     </div>
                 </div>
             </div>
@@ -417,5 +434,43 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Pricing toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtns = document.querySelectorAll('.toggle-btn');
+            
+            toggleBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const period = this.dataset.period;
+                    
+                    // Update toggle buttons
+                    toggleBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide pricing based on selected period
+                    if (period === 'monthly') {
+                        // Show monthly pricing
+                        document.querySelectorAll('.monthly-price, .monthly-period, .monthly-billing').forEach(el => {
+                            el.style.display = 'inline';
+                        });
+                        // Hide weekly pricing
+                        document.querySelectorAll('.weekly-price, .weekly-period, .weekly-billing').forEach(el => {
+                            el.style.display = 'none';
+                        });
+                    } else {
+                        // Show weekly pricing
+                        document.querySelectorAll('.weekly-price, .weekly-period, .weekly-billing').forEach(el => {
+                            el.style.display = 'inline';
+                        });
+                        // Hide monthly pricing
+                        document.querySelectorAll('.monthly-price, .monthly-period, .monthly-billing').forEach(el => {
+                            el.style.display = 'none';
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
