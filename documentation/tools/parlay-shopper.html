@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parlay Shopper - Optimal Parlay Pricing | BetterSlip Documentation</title>
+    <meta name="description" content="Learn how to use BetterSlip's Parlay Shopper to compare parlay odds across sportsbooks and find the best payouts for your specific leg combinations.">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../" class="nav-brand">
+                    <img src="../../assets/icon.png" alt="BetterSlip Logo" class="nav-logo">
+                    BetterSlip
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../../">Home</a></li>
+                    <li><a href="../../blog/">Blog</a></li>
+                    <li><a href="../">Documentation</a></li>
+                    <li><a href="https://betterslip.com" target="_blank" class="cta-link">Visit BetterSlip</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <h3>Core Features</h3>
+            <ul class="docs-nav">
+                <li><a href="arbitrage.html">Arbitrage Finder</a></li>
+                <li><a href="positive-ev.html">Positive EV</a></li>
+                <li><a href="best-odds.html">Best Odds</a></li>
+                <li><a href="ai-parlay.html">AI Parlay Builder</a></li>
+                <li><a href="low-holds.html">Low Holds</a></li>
+                <li><a href="middles.html">Middles</a></li>
+                <li><a href="promo-converter.html">Promo Converter</a></li>
+                <li><a href="parlay-shopper.html" class="active">Parlay Shopper</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="bet-tracker.html">Bet Tracker</a></li>
+            </ul>
+        </aside>
+
+        <main class="docs-content">
+            <div class="breadcrumb">
+                <a href="../../">Home</a> / <a href="../">Documentation</a> / <a href="parlay-shopper.html">Parlay Shopper</a>
+            </div>
+
+            <h1>🛒 Parlay Shopper</h1>
+            
+            <div class="info-box">
+                <strong>Optimal Parlay Pricing:</strong> Compare parlay odds across sportsbooks to find the best payouts for your specific leg combinations.
+            </div>
+
+            <h2>What is Parlay Shopping?</h2>
+            <p>Parlay shopping involves comparing the same multi-leg bet across different sportsbooks to find the highest potential payout. Unlike single bet line shopping, parlay odds can vary significantly between sportsbooks due to different correlation pricing and parlay calculation methods.</p>
+
+            <div class="warning-box">
+                <strong>⚡ Massive Payout Differences:</strong> The same parlay can have 10-30% payout differences between sportsbooks, especially on longer parlays with correlated legs.
+            </div>
+
+            <h2>Why Parlay Shopping Matters</h2>
+
+            <h3>💰 Significant Payout Differences</h3>
+            <p><strong>Example:</strong> 4-leg NFL parlay</p>
+            <ul>
+                <li><strong>Sportsbook A:</strong> +1200 odds ($100 bet wins $1,200)</li>
+                <li><strong>Sportsbook B:</strong> +1450 odds ($100 bet wins $1,450)</li>
+                <li><strong>Difference:</strong> $250 extra profit (20.8% increase)</li>
+            </ul>
+
+            <h3>🎯 Correlation Pricing Variations</h3>
+            <p>Sportsbooks price correlated parlay legs differently:</p>
+            <ul>
+                <li><strong>Conservative Books:</strong> Reduce odds for correlated legs</li>
+                <li><strong>Aggressive Books:</strong> Offer full parlay multiplication</li>
+                <li><strong>Market Leaders:</strong> Most competitive parlay pricing</li>
+                <li><strong>Recreational Books:</strong> Often inferior parlay odds</li>
+            </ul>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔍 Real-Time Comparison</h4>
+                    <p>Instantly compare the same parlay across all major sportsbooks to find the highest available payout.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>📊 Payout Optimization</h4>
+                    <p>Identify which sportsbooks consistently offer the best parlay pricing for your betting style.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🎯 Correlation Analysis</h4>
+                    <p>Understand how different sportsbooks price correlated vs. uncorrelated parlay combinations.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>⚡ Quick Execution</h4>
+                    <p>Seamlessly navigate to the optimal sportsbook to place your parlay bet at the best available odds.</p>
+                </div>
+            </div>
+
+            <h2>How to Use Parlay Shopper</h2>
+
+            <ol class="step-list">
+                <li><strong>Build Your Parlay:</strong> Select your desired betting legs using our leg builder interface.</li>
+                <li><strong>Compare Across Books:</strong> Instantly see payout odds for the same parlay at every major sportsbook.</li>
+                <li><strong>Analyze Differences:</strong> Review why certain books offer better pricing for your specific combination.</li>
+                <li><strong>Select Optimal Book:</strong> Choose the sportsbook offering the highest payout for your parlay.</li>
+                <li><strong>Place Your Bet:</strong> Navigate directly to the chosen sportsbook to execute your optimized parlay.</li>
+            </ol>
+
+            <h2>Types of Parlay Variations</h2>
+
+            <h3>🎯 Standard Parlays</h3>
+            <ul>
+                <li><strong>Traditional Multiplication:</strong> Each leg's odds multiplied together</li>
+                <li><strong>Independent Legs:</strong> Uncorrelated betting selections</li>
+                <li><strong>Cross-Sport Parlays:</strong> Legs from different sports/leagues</li>
+                <li><strong>Same-Game Exclusions:</strong> Multiple bets from single game</li>
+            </ul>
+
+            <h3>📈 Same-Game Parlays (SGP)</h3>
+            <ul>
+                <li><strong>Correlation Adjustments:</strong> Reduced odds for related outcomes</li>
+                <li><strong>Popular Markets:</strong> Player props + game totals</li>
+                <li><strong>Sportsbook Specific:</strong> Each book has different SGP rules</li>
+                <li><strong>Higher Variance:</strong> More dramatic pricing differences</li>
+            </ul>
+
+            <h3>🎲 Parlay Boosts & Promos</h3>
+            <ul>
+                <li><strong>Enhanced Odds:</strong> Temporary payout increases</li>
+                <li><strong>Insurance Offers:</strong> Refunds if one leg fails</li>
+                <li><strong>Profit Boosts:</strong> Percentage increases on winnings</li>
+                <li><strong>Early Payout:</strong> Win if team leads by certain amount</li>
+            </ul>
+
+            <h2>Parlay Pricing Factors</h2>
+
+            <h3>🧮 Mathematical Calculation Methods</h3>
+            <ul>
+                <li><strong>True Odds Multiplication:</strong> Pure mathematical approach</li>
+                <li><strong>Hold Adjustment:</strong> Increased house edge on parlays</li>
+                <li><strong>Correlation Discounting:</strong> Reduced payouts for related bets</li>
+                <li><strong>Market Competition:</strong> Competitive pressure on pricing</li>
+            </ul>
+
+            <h3>📊 Sportsbook Pricing Strategies</h3>
+            <ul>
+                <li><strong>Volume Leaders:</strong> DraftKings, FanDuel offer competitive parlay odds</li>
+                <li><strong>Market Makers:</strong> Sharp books with efficient pricing</li>
+                <li><strong>Recreational Focused:</strong> Higher holds but better promotions</li>
+                <li><strong>Specialists:</strong> Books specializing in certain sports/markets</li>
+            </ul>
+
+            <div class="success-box">
+                <strong>Pro Tip:</strong> Same-game parlays often have the biggest pricing differences between sportsbooks. A single parlay can vary by 25-40% in payout between different books.
+            </div>
+
+            <h2>Advanced Parlay Shopping Strategies</h2>
+
+            <h3>🎯 Leg Substitution Optimization</h3>
+            <p>Sometimes slight changes to parlay legs can unlock better pricing:</p>
+            <ul>
+                <li><strong>Alternate Lines:</strong> Different point spreads or totals</li>
+                <li><strong>Similar Props:</strong> Comparable player performance bets</li>
+                <li><strong>Market Timing:</strong> Same bet at different times</li>
+                <li><strong>Book Specialization:</strong> Each book's strongest markets</li>
+            </ul>
+
+            <h3>🔄 Dynamic Parlay Building</h3>
+            <ul>
+                <li><strong>Real-Time Optimization:</strong> Adjust legs based on live pricing</li>
+                <li><strong>Conditional Logic:</strong> "If odds better than X, include leg Y"</li>
+                <li><strong>Threshold Alerts:</strong> Notifications when target payouts available</li>
+                <li><strong>Multi-Book Strategy:</strong> Split parlays across books when beneficial</li>
+            </ul>
+
+            <h2>Common Parlay Shopping Scenarios</h2>
+
+            <h3>🏈 NFL Same-Game Parlays</h3>
+            <p><strong>Example Parlay:</strong> QB Over 250 yards + Team Over 24.5 points + WR Over 75 yards</p>
+            <ul>
+                <li><strong>High Correlation:</strong> All legs likely to succeed together</li>
+                <li><strong>Book A:</strong> +550 (recognizes correlation, reduces odds)</li>
+                <li><strong>Book B:</strong> +750 (less correlation adjustment)</li>
+                <li><strong>Book C:</strong> +680 (moderate correlation pricing)</li>
+                <li><strong>Optimal Choice:</strong> Book B for 36% higher payout</li>
+            </ul>
+
+            <h3>🏀 NBA Cross-Game Parlays</h3>
+            <p><strong>Example Parlay:</strong> 4 player Over props from different games</p>
+            <ul>
+                <li><strong>Low Correlation:</strong> Independent outcomes</li>
+                <li><strong>True Odds:</strong> Should be simple multiplication</li>
+                <li><strong>Book Efficiency:</strong> Some books add unnecessary hold</li>
+                <li><strong>Shopping Value:</strong> Find books with minimal parlay tax</li>
+            </ul>
+
+            <h3>⚾ MLB Player Props Parlay</h3>
+            <p><strong>Example Parlay:</strong> Multiple hitter Over props</p>
+            <ul>
+                <li><strong>Weather Correlation:</strong> Hitting conditions affect all batters</li>
+                <li><strong>Lineup Correlation:</strong> Same-team players may be related</li>
+                <li><strong>Pricing Variation:</strong> Books handle baseball correlations differently</li>
+                <li><strong>Value Discovery:</strong> Significant shopping opportunities</li>
+            </ul>
+
+            <h2>Parlay Shopping Best Practices</h2>
+
+            <h3>⏰ Timing Considerations</h3>
+            <ul>
+                <li><strong>Early Lines:</strong> Initial parlay pricing may offer best value</li>
+                <li><strong>News Response:</strong> Books adjust parlay odds at different speeds</li>
+                <li><strong>Volume Patterns:</strong> Parlay odds change based on betting volume</li>
+                <li><strong>Close to Game:</strong> Final parlay adjustments before games start</li>
+            </ul>
+
+            <h3>🎯 Selection Optimization</h3>
+            <ul>
+                <li><strong>Book Strengths:</strong> Each sportsbook excels in different areas</li>
+                <li><strong>Promotion Integration:</strong> Combine shopping with available boosts</li>
+                <li><strong>Correlation Awareness:</strong> Understand how books price relationships</li>
+                <li><strong>Limit Management:</strong> Consider betting limits at optimal books</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Important:</strong> Parlay odds can change rapidly, especially for same-game parlays. Always verify final odds at the sportsbook before placing your bet.
+            </div>
+
+            <h2>Technology and Integration</h2>
+
+            <h3>🔗 Tool Integration</h3>
+            <ul>
+                <li><strong>AI Parlay Builder:</strong> Compare AI-generated parlays across books</li>
+                <li><strong>Positive EV Finder:</strong> Identify parlays with positive expected value</li>
+                <li><strong>Bet Tracker:</strong> Monitor parlay shopping success rates</li>
+                <li><strong>Calculators:</strong> Verify parlay mathematics and expected returns</li>
+            </ul>
+
+            <h3>📱 Mobile Optimization</h3>
+            <ul>
+                <li><strong>Quick Comparison:</strong> Rapid parlay shopping on mobile devices</li>
+                <li><strong>App Integration:</strong> Direct links to sportsbook mobile apps</li>
+                <li><strong>Real-Time Updates:</strong> Live odds changes across all platforms</li>
+                <li><strong>Notification System:</strong> Alerts for optimal parlay pricing</li>
+            </ul>
+
+            <h2>Understanding Parlay Mathematics</h2>
+
+            <h3>🧮 Basic Parlay Calculation</h3>
+            <p><strong>Independent Legs Formula:</strong></p>
+            <ul>
+                <li><strong>Leg 1:</strong> +150 (2.5 decimal odds)</li>
+                <li><strong>Leg 2:</strong> +200 (3.0 decimal odds)</li>
+                <li><strong>Leg 3:</strong> -110 (1.91 decimal odds)</li>
+                <li><strong>True Parlay Odds:</strong> 2.5 × 3.0 × 1.91 = 14.325</li>
+                <li><strong>American Odds:</strong> +1332.5</li>
+            </ul>
+
+            <h3>📉 Correlation Adjustments</h3>
+            <ul>
+                <li><strong>Positive Correlation:</strong> Odds reduced from true calculation</li>
+                <li><strong>Negative Correlation:</strong> Sometimes better odds than calculation suggests</li>
+                <li><strong>Independent Events:</strong> Should match mathematical calculation</li>
+                <li><strong>House Edge:</strong> Additional reduction for sportsbook profit</li>
+            </ul>
+
+            <h2>Performance Tracking</h2>
+
+            <h3>📊 Key Shopping Metrics</h3>
+            <ul>
+                <li><strong>Average Payout Improvement:</strong> Extra profit from shopping</li>
+                <li><strong>Best Sportsbook by Category:</strong> Which books excel in different parlay types</li>
+                <li><strong>Time Efficiency:</strong> Speed of finding optimal parlays</li>
+                <li><strong>Shopping Success Rate:</strong> Percentage of parlays with improved payouts</li>
+            </ul>
+
+            <h3>🎯 Success Benchmarks</h3>
+            <ul>
+                <li><strong>Payout Improvement:</strong> 10-20% average increase through shopping</li>
+                <li><strong>Same-Game Parlays:</strong> 15-30% potential improvement</li>
+                <li><strong>Cross-Sport Parlays:</strong> 5-15% typical improvement</li>
+                <li><strong>Long Parlays (5+ legs):</strong> 20-40% potential differences</li>
+            </ul>
+
+            <h2>Common Mistakes to Avoid</h2>
+
+            <ul>
+                <li><strong>Ignoring Correlation Pricing:</strong> Not understanding why payouts differ</li>
+                <li><strong>Chasing Highest Odds:</strong> Without considering book reliability</li>
+                <li><strong>Not Verifying Final Odds:</strong> Odds change between comparison and placement</li>
+                <li><strong>Overlooking Promotions:</strong> Missing boosts and enhanced odds</li>
+                <li><strong>Poor Bankroll Distribution:</strong> Not having funds at optimal books</li>
+            </ul>
+
+            <div class="cta-section">
+                <h3>Start Shopping Parlay Odds</h3>
+                <p>Maximize your parlay payouts by finding the best odds across all major sportsbooks.</p>
+                <a href="https://betterslip.com/tools/parlay-shopper" class="cta-button" target="_blank">Use Parlay Shopper</a>
+            </div>
+
+            <div class="docs-footer-nav">
+                <a href="promo-converter.html">← Previous: Promo Converter</a>
+                <a href="calculators.html">Next: Betting Calculators →</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BetterSlip</h3>
+                    <p>Your AI-Native Betting Copilot for smarter sports betting decisions.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BetterSlip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
