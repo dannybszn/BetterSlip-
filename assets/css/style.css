@@ -444,10 +444,30 @@ footer {
     background: white;
     border-radius: 12px;
     padding: 1.5rem;
-    height: fit-content;
     position: sticky;
     top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar for sidebar */
+.docs-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.docs-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb {
+    background: #C5B358;
+    border-radius: 3px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #B3A147;
 }
 
 .docs-sidebar h3 {
