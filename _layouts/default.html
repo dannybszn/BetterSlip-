@@ -10,7 +10,9 @@
     {% seo %}
     
     <!-- Favicon -->
-    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
+    <link rel="shortcut icon" type="image/png" href="{{ '/assets/icon.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/icon.png' | relative_url }}">
     
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -31,7 +33,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="{{ '/' | relative_url }}" class="nav-brand">
-                    <img src="{{ '/assets/logo.png' | relative_url }}" alt="BetterSlip Logo" class="nav-logo">
+                    <img src="{{ '/assets/icon.png' | relative_url }}" alt="BetterSlip Logo" class="nav-logo">
                     {{ site.title }}
                 </a>
                 <ul class="nav-menu">

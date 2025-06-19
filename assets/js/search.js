@@ -8,8 +8,18 @@ class DocumentationSearch {
     }
 
     init() {
-        this.indexContent();
+        this.loadSearchIndex();
         this.setupEventListeners();
+    }
+
+    loadSearchIndex() {
+        // Use the global search index if available
+        if (typeof SEARCH_INDEX !== 'undefined') {
+            this.searchableContent = SEARCH_INDEX;
+        } else {
+            // Fallback to indexing current page
+            this.indexContent();
+        }
     }
 
     indexContent() {
@@ -96,12 +106,22 @@ class DocumentationSearch {
 
     setupEventListeners() {
         this.searchInputs.forEach(input => {
+            // Wrap input in a container if not already wrapped
+            if (!input.parentElement.classList.contains('search-container')) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'search-container';
+                input.parentNode.insertBefore(wrapper, input);
+                wrapper.appendChild(input);
+            }
+
             input.addEventListener('input', this.debounce((e) => {
                 this.performSearch(e.target.value);
             }, 300));
 
             input.addEventListener('focus', () => {
-                this.showSearchResults();
+                if (input.value.length >= 2) {
+                    this.performSearch(input.value);
+                }
             });
 
             input.addEventListener('keydown', (e) => {
@@ -136,26 +156,46 @@ class DocumentationSearch {
         }
 
         const normalizedQuery = query.toLowerCase();
+        const queryWords = normalizedQuery.split(/\s+/);
         const results = [];
 
         this.searchableContent.forEach(item => {
             let score = 0;
-            const titleMatch = item.title.toLowerCase().includes(normalizedQuery);
-            const contentMatch = item.content.toLowerCase().includes(normalizedQuery);
-
-            if (titleMatch) {
-                score += item.title.toLowerCase().indexOf(normalizedQuery) === 0 ? 10 : 5;
+            const titleLower = item.title.toLowerCase();
+            const contentLower = item.content.toLowerCase();
+            
+            // Check for exact phrase match
+            const exactTitleMatch = titleLower.includes(normalizedQuery);
+            const exactContentMatch = contentLower.includes(normalizedQuery);
+            
+            // Check for all words present
+            const allWordsInTitle = queryWords.every(word => titleLower.includes(word));
+            const allWordsInContent = queryWords.every(word => contentLower.includes(word));
+            
+            // Score calculation
+            if (exactTitleMatch) {
+                score += titleLower.indexOf(normalizedQuery) === 0 ? 20 : 15;
+            } else if (allWordsInTitle) {
+                score += 10;
             }
-            if (contentMatch) {
-                score += 1;
+            
+            if (exactContentMatch) {
+                score += 5;
+            } else if (allWordsInContent) {
+                score += 2;
+            }
+            
+            // Bonus for category match
+            if (item.category && item.category.toLowerCase().includes(normalizedQuery)) {
+                score += 3;
             }
 
             if (score > 0) {
                 results.push({
                     ...item,
                     score,
-                    titleMatch,
-                    contentMatch
+                    titleMatch: exactTitleMatch || allWordsInTitle,
+                    contentMatch: exactContentMatch || allWordsInContent
                 });
             }
         });
@@ -164,7 +204,7 @@ class DocumentationSearch {
         results.sort((a, b) => b.score - a.score);
         
         // Limit results
-        this.currentResults = results.slice(0, 8);
+        this.currentResults = results.slice(0, 10);
         this.displaySearchResults(this.currentResults, query);
     }
 
@@ -190,10 +230,10 @@ class DocumentationSearch {
                     <div class="search-result-item ${index === 0 ? 'highlighted' : ''}" data-url="${result.url}">
                         <div class="search-result-title">
                             ${this.highlightText(result.title, query)}
-                            ${result.isNavigation ? '<span class="nav-badge">Navigation</span>' : ''}
+                            ${result.category ? `<span class="nav-badge">${result.category}</span>` : ''}
                         </div>
                         <div class="search-result-content">
-                            ${this.highlightText(this.truncateText(result.content, 100), query)}
+                            ${this.highlightText(this.truncateText(result.content, 120), query)}
                         </div>
                     </div>
                 `).join('');
@@ -277,6 +317,9 @@ class DocumentationSearch {
                 e.preventDefault();
                 if (highlighted) {
                     highlighted.click();
+                } else if (e.target.value.length >= 2) {
+                    // If no item is highlighted but there's a search query, perform the search
+                    this.performSearch(e.target.value);
                 }
                 break;
                 
@@ -301,24 +344,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // CSS for search results (injected via JavaScript)
 const searchStyles = `
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
 .search-results {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: #2a2a2a;
-    border: 1px solid #444;
+    background: white;
+    border: 1px solid #dee2e6;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     max-height: 400px;
     overflow-y: auto;
     display: none;
+    margin-top: 4px;
 }
 
 .search-result-item {
     padding: 12px 16px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #eee;
     cursor: pointer;
     transition: background-color 0.2s;
 }
@@ -329,17 +378,17 @@ const searchStyles = `
 
 .search-result-item:hover,
 .search-result-item.highlighted {
-    background-color: #333;
+    background-color: #f8f9fa;
 }
 
 .search-result-item.no-results {
     cursor: default;
-    color: #888;
+    color: #666;
 }
 
 .search-result-title {
     font-weight: bold;
-    color: #C5B358;
+    color: #1a1a1a;
     margin-bottom: 4px;
     display: flex;
     align-items: center;
@@ -347,14 +396,14 @@ const searchStyles = `
 }
 
 .search-result-content {
-    color: #ccc;
+    color: #666;
     font-size: 14px;
     line-height: 1.4;
 }
 
 .nav-badge {
-    background: #444;
-    color: #888;
+    background: #C5B358;
+    color: #000;
     font-size: 10px;
     padding: 2px 6px;
     border-radius: 4px;
@@ -381,16 +430,16 @@ const searchStyles = `
 }
 
 .search-results::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: #f1f1f1;
 }
 
 .search-results::-webkit-scrollbar-thumb {
-    background: #555;
+    background: #C5B358;
     border-radius: 3px;
 }
 
 .search-results::-webkit-scrollbar-thumb:hover {
-    background: #666;
+    background: #B3A147;
 }
 `;
 
