@@ -103,6 +103,38 @@ const pages = [
         url: '/documentation/mobile-app.html',
         priority: '0.8',
         changefreq: 'monthly'
+    },
+    // Account & Billing
+    {
+        url: '/documentation/plans.html',
+        priority: '0.8',
+        changefreq: 'monthly'
+    },
+    {
+        url: '/documentation/billing.html',
+        priority: '0.7',
+        changefreq: 'monthly'
+    },
+    {
+        url: '/documentation/account-settings.html',
+        priority: '0.7',
+        changefreq: 'monthly'
+    },
+    {
+        url: '/documentation/support.html',
+        priority: '0.7',
+        changefreq: 'monthly'
+    },
+    // Getting Started Pages
+    {
+        url: '/documentation/account-setup.html',
+        priority: '0.8',
+        changefreq: 'monthly'
+    },
+    {
+        url: '/documentation/first-bet.html',
+        priority: '0.8',
+        changefreq: 'monthly'
     }
 ];
 
