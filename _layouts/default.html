@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    
+    <!-- SEO -->
+    {% seo %}
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Google Analytics -->
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="{{ '/' | relative_url }}" class="nav-brand">
+                    <img src="{{ '/assets/logo.png' | relative_url }}" alt="BetterSlip Logo" class="nav-logo">
+                    {{ site.title }}
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+                    <li><a href="{{ '/documentation/' | relative_url }}">Docs</a></li>
+                    <li><a href="https://betterslip.com" target="_blank" class="cta-link">Visit BetterSlip</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BetterSlip</h3>
+                    <p>Your AI-Native Betting Copilot for smarter sports betting decisions.</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/betterslip_" target="_blank">Twitter</a>
+                        <a href="https://betterslip.com" target="_blank">Website</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+                        <li><a href="{{ '/documentation/' | relative_url }}">Documentation</a></li>
+                        <li><a href="https://betterslip.com/plans" target="_blank">Pricing</a></li>
+                        <li><a href="https://betterslip.com/tools" target="_blank">Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="https://betterslip.com/about" target="_blank">About</a></li>
+                        <li><a href="https://betterslip.com/contact" target="_blank">Contact</a></li>
+                        <li><a href="https://betterslip.com/privacy" target="_blank">Privacy</a></li>
+                        <li><a href="https://betterslip.com/terms" target="_blank">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ 'now' | date: "%Y" }} BetterSlip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
