@@ -20,28 +20,18 @@ const pages = [
         priority: '0.9',
         changefreq: 'weekly'
     },
-    // Advanced Features
+    // Getting Started
     {
-        url: '/documentation/alerts.html',
+        url: '/documentation/index.html',
+        priority: '0.9',
+        changefreq: 'weekly'
+    },
+    {
+        url: '/documentation/getting-started.html',
         priority: '0.8',
         changefreq: 'monthly'
     },
-    {
-        url: '/documentation/filters.html',
-        priority: '0.8',
-        changefreq: 'monthly'
-    },
-    {
-        url: '/documentation/analytics.html',
-        priority: '0.8',
-        changefreq: 'monthly'
-    },
-    {
-        url: '/documentation/mobile-app.html',
-        priority: '0.8',
-        changefreq: 'monthly'
-    },
-    // Core Tools
+    // Core Tools - High Priority
     {
         url: '/documentation/tools/arbitrage.html',
         priority: '0.9',
@@ -53,13 +43,13 @@ const pages = [
         changefreq: 'monthly'
     },
     {
-        url: '/documentation/tools/best-odds.html',
-        priority: '0.8',
+        url: '/documentation/tools/ai-parlay.html',
+        priority: '0.9',
         changefreq: 'monthly'
     },
     {
-        url: '/documentation/tools/ai-parlay.html',
-        priority: '0.9',
+        url: '/documentation/tools/best-odds.html',
+        priority: '0.8',
         changefreq: 'monthly'
     },
     {
@@ -91,6 +81,27 @@ const pages = [
     {
         url: '/documentation/tools/parlay-shopper.html',
         priority: '0.6',
+        changefreq: 'monthly'
+    },
+    // Advanced Features
+    {
+        url: '/documentation/alerts.html',
+        priority: '0.8',
+        changefreq: 'monthly'
+    },
+    {
+        url: '/documentation/filters.html',
+        priority: '0.8',
+        changefreq: 'monthly'
+    },
+    {
+        url: '/documentation/analytics.html',
+        priority: '0.8',
+        changefreq: 'monthly'
+    },
+    {
+        url: '/documentation/mobile-app.html',
+        priority: '0.8',
         changefreq: 'monthly'
     }
 ];
