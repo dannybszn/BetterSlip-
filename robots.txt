@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Exclude blog posts since they're hosted on main site
+Disallow: /blog/
+
+# Allow all documentation and main pages
+Allow: /documentation/
+Allow: /assets/
+
+# Sitemap location
+Sitemap: https://docs.betterslip.com/sitemap.xml
