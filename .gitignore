@@ -4,3 +4,5 @@ node_modules/
 *.log
 fetch-blog-content.js
 convert-old-blogs.js
+generate-blog-index.js
+add-blog-navigation.js

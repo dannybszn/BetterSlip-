@@ -4,405 +4,282 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BetterSlip Blog - Sports Betting Technology & Analysis</title>
-    <meta name="description" content="Expert insights on sports betting technology, odds comparison, arbitrage detection, and betting strategies from the BetterSlip team.">
-    <meta name="keywords" content="sports betting, betting technology, odds comparison, arbitrage betting, positive EV, betting analysis, BetterSlip">
-    
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
-        .subtitle {
-            color: #666;
-            font-size: 20px;
-            margin-bottom: 40px;
-        }
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        .article-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        .article-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-        }
-        .article-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .article-content {
-            padding: 20px;
-        }
-        .article-meta {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        .article-title {
-            color: #1a1a1a;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-        .article-excerpt {
-            color: #666;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        .footer-section {
-            margin-top: 60px;
-            text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 8px;
-        }
-    </style>
+    <meta name="description" content="Expert insights on sports betting technology, odds comparison, arbitrage detection, and betting strategies from the BetterSlip team">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <h1>BetterSlip Blog</h1>
-    <p class="subtitle">In-depth articles about sports betting technology, odds comparison, and betting analysis</p>
-    
-    <div class="articles-grid">
-        
-        <a href="advanced-hedging-multi-bet-optimization.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/683117f4d3b96619817f39ea-1748069034746.jpg" alt="Advanced Hedging: Multi-Bet Optimization" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 12 min read
-                </div>
-                <h2 class="article-title">Advanced Hedging: Multi-Bet Optimization</h2>
-                <p class="article-excerpt">Explore advanced multi-bet optimization strategies to manage risks and enhance profits through dynamic hedging and mathematical models.</p>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../" class="nav-brand">
+                    <img src="../assets/icon.png" alt="BetterSlip Logo" class="nav-logo">
+                    BetterSlip
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../">Home</a></li>
+                    <li><a href="./">Blog</a></li>
+                    <li><a href="../documentation/">Documentation</a></li>
+                    <li><a href="https://betterslip.com" target="_blank" class="cta-link">Visit BetterSlip</a></li>
+                </ul>
             </div>
-        </a>
+        </nav>
+    </header>
+
+    <main>
+        <div style="margin-bottom: 2rem;">
+            <a href="../" style="display: inline-flex; align-items: center; color: #C5B358; text-decoration: none; font-weight: 500; margin-bottom: 1rem;">
+                <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+
+        <h1>BetterSlip Blog</h1>
+        <p class="subtitle">In-depth articles about sports betting technology, odds comparison, and betting analysis</p>
+
+        <!-- Category Filter -->
+        <div style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem;">
+            <button onclick="showCategory('all')" class="category-filter active" data-category="all">All Articles</button>
+            <a href="category-technology-ai.html" class="category-filter">Technology & AI</a><a href="category-arbitrage-strategy.html" class="category-filter">Arbitrage & Strategy</a><a href="category-data-analysis-tools.html" class="category-filter">Data Analysis & Tools</a><a href="category-betting-fundamentals.html" class="category-filter">Betting Fundamentals</a><a href="category-betterslip-features.html" class="category-filter">BetterSlip Features</a>
+        </div>
+
+        <!-- Latest Articles -->
+        <div class="blog-grid" id="articles-container">
+            
+                <a href="advanced-hedging-multi-bet-optimization.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Technology & AI
+                        </div>
+                        <h3>Advanced Hedging: Multi-Bet Optimization</h3>
+                        <p>Explore advanced multi-bet optimization strategies to manage risks and enhance profits through dynamic hedging and mathematical models.</p>
+                        <div class="blog-meta">May 23, 2025 • 15 min read</div>
+                    </div>
+                </a>
+            
+                <a href="kelly-criterion-in-dynamic-stake-models.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Technology & AI
+                        </div>
+                        <h3>Kelly Criterion in Dynamic Stake Models</h3>
+                        <p>Understanding how to apply the Kelly Criterion in dynamic betting environments with real-time data.</p>
+                        <div class="blog-meta">May 22, 2025 • 12 min read</div>
+                    </div>
+                </a>
+            
+                <a href="how-latency-affects-arbitrage-opportunities.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Arbitrage & Strategy
+                        </div>
+                        <h3>How Latency Affects Arbitrage Opportunities</h3>
+                        <p>Understanding how network latency and execution speed impact arbitrage betting success.</p>
+                        <div class="blog-meta">May 21, 2025 • 10 min read</div>
+                    </div>
+                </a>
+            
+                <a href="3-ways-to-analyze-historical-betting-trends.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Data Analysis & Tools
+                        </div>
+                        <h3>3 Ways to Analyze Historical Betting Trends</h3>
+                        <p>Discover three powerful methods for analyzing historical betting data to find profitable patterns.</p>
+                        <div class="blog-meta">May 21, 2025 • 10 min read</div>
+                    </div>
+                </a>
+            
+                <a href="what-are-sports-book-odds-boosts-how-to-use-profit-boosts-at-sportsbooks.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Betting Fundamentals
+                        </div>
+                        <h3>What are Sports Book Odds Boosts?</h3>
+                        <p>Understand how to identify and capitalize on profitable odds boosts and promotions.</p>
+                        <div class="blog-meta">May 21, 2025 • 8 min read</div>
+                    </div>
+                </a>
+            
+                <a href="time-series-analysis-for-live-odds.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Technology & AI
+                        </div>
+                        <h3>Time Series Analysis for Live Odds</h3>
+                        <p>Learn how time series analysis helps predict odds movements and identify optimal betting timing.</p>
+                        <div class="blog-meta">May 20, 2025 • 14 min read</div>
+                    </div>
+                </a>
+            
+                <a href="what-is-arbitrage-betting.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Arbitrage & Strategy
+                        </div>
+                        <h3>What is Arbitrage Betting?</h3>
+                        <p>A comprehensive guide to understanding and implementing arbitrage betting strategies for guaranteed profits.</p>
+                        <div class="blog-meta">May 19, 2025 • 8 min read</div>
+                    </div>
+                </a>
+            
+                <a href="5-ways-historical-data-improves-betting-accuracy.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Data Analysis & Tools
+                        </div>
+                        <h3>5 Ways Historical Data Improves Betting Accuracy</h3>
+                        <p>Learn how historical data analysis can significantly improve your betting decision-making process.</p>
+                        <div class="blog-meta">May 19, 2025 • 12 min read</div>
+                    </div>
+                </a>
+            
+                <a href="how-bookmaker-comparison-tools-improve-betting-roi.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Data Analysis & Tools
+                        </div>
+                        <h3>How Bookmaker Comparison Tools Improve Betting ROI</h3>
+                        <p>Discover how odds comparison tools can significantly boost your return on investment.</p>
+                        <div class="blog-meta">May 19, 2025 • 11 min read</div>
+                    </div>
+                </a>
+            
+                <a href="what-is-positive-expected-value-in-sports-betting-how-expected-value-in-betting-is-calculated.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Betting Fundamentals
+                        </div>
+                        <h3>What is Positive Expected Value in Sports Betting?</h3>
+                        <p>Master the concept of expected value and learn how to calculate it for long-term betting success.</p>
+                        <div class="blog-meta">May 19, 2025 • 13 min read</div>
+                    </div>
+                </a>
+            
+                <a href="what-is-juice-in-sports-betting-how-to-calculate-juice-in-betting.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Betting Fundamentals
+                        </div>
+                        <h3>What is Juice in Sports Betting? How to Calculate Juice</h3>
+                        <p>Learn about the sportsbook's built-in advantage and how to calculate and minimize juice.</p>
+                        <div class="blog-meta">May 19, 2025 • 9 min read</div>
+                    </div>
+                </a>
+            
+                <a href="analyzing-line-movement-with-historical-data.html" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Data Analysis & Tools
+                        </div>
+                        <h3>Analyzing Line Movement with Historical Data</h3>
+                        <p>Master the art of line movement analysis using comprehensive historical betting data.</p>
+                        <div class="blog-meta">May 18, 2025 • 14 min read</div>
+                    </div>
+                </a>
+            
+        </div>
+
         
-        <a href="kelly-criterion-in-dynamic-stake-models.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682fc5c0d3b96619817dbf0c-1747974716422.jpg" alt="Kelly Criterion in Dynamic Stake Models" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
+        <div style="text-align: center; margin-top: 2rem;">
+            <button onclick="loadMoreArticles()" id="load-more-btn" style="background-color: #C5B358; color: #000; padding: 0.75rem 2rem; border: none; border-radius: 8px; font-weight: 500; cursor: pointer;">
+                Load More Articles
+            </button>
+        </div>
+        
+
+        <div class="cta-section">
+            <h3>Ready to Put These Insights to Work?</h3>
+            <p>Join BetterSlip and start using our AI-powered tools to find profitable betting opportunities.</p>
+            <a href="https://betterslip.com/register" class="cta-button" target="_blank">Get Started Free</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BetterSlip</h3>
+                    <p>Your AI-Native Betting Copilot for smarter sports betting decisions.</p>
                 </div>
-                <h2 class="article-title">Kelly Criterion in Dynamic Stake Models</h2>
-                <p class="article-excerpt">Learn how the Kelly Criterion optimizes betting strategies by managing risk and enhancing bankroll growth through dynamic and fractional staking.</p>
             </div>
-        </a>
-        
-        <a href="3-ways-to-analyze-historical-betting-trends.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682fafdcd3b96619817d9f24-1747957550301.jpg" alt="3 Ways to Analyze Historical Betting Trends" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 12 min read
-                </div>
-                <h2 class="article-title">3 Ways to Analyze Historical Betting Trends</h2>
-                <p class="article-excerpt">Unlock smarter betting strategies by analyzing historical trends, team stats, and market movements for better decision-making.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BetterSlip. All rights reserved.</p>
             </div>
-        </a>
+        </div>
+    </footer>
+
+    <style>
+        .category-filter {
+            padding: 0.5rem 1rem;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            background: white;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
         
-        <a href="what-are-sports-book-odds-boosts-how-to-use-profit-boosts-at-sportsbooks.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682faf28d3b96619817d9e2d-1747957352117.jpg" alt="What are Sports Book Odds Boosts? How to Use Profit Boosts at Sportsbooks" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">What are Sports Book Odds Boosts? How to Use Profit Boosts at Sportsbooks</h2>
-                <p class="article-excerpt">Understand how odds boosts and profit boosts work at sportsbooks to enhance your betting payouts and maximize your returns.</p>
-            </div>
-        </a>
-        
-        <a href="how-latency-affects-arbitrage-opportunities.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682e80844fa53d4220801328-1747898984691.jpg" alt="How Latency Affects Arbitrage Opportunities" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">How Latency Affects Arbitrage Opportunities</h2>
-                <p class="article-excerpt">Learn how latency impacts arbitrage betting and discover strategies to minimize delays for maximizing profits.</p>
-            </div>
-        </a>
-        
-        <a href="time-series-analysis-for-live-odds.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682d34284fa53d42207e4d72-1747822062938.jpg" alt="Time Series Analysis for Live Odds" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 10 min read
-                </div>
-                <h2 class="article-title">Time Series Analysis for Live Odds</h2>
-                <p class="article-excerpt">Explore how time series analysis enhances live sports betting by predicting odds movements and identifying profitable opportunities.</p>
-            </div>
-        </a>
-        
-        <a href="what-is-juice-in-sports-betting-how-to-calculate-juice-in-betting.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682d00204fa53d42207e1548-1747781239341.jpg" alt="What is Juice in Sports Betting? How to Calculate Juice in Betting" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">What is Juice in Sports Betting? How to Calculate Juice in Betting</h2>
-                <p class="article-excerpt">Learn about juice in sports betting, how to calculate it, and strategies to reduce its impact on your profits for smarter wagering.</p>
-            </div>
-        </a>
-        
-        <a href="what-is-arbitrage-betting.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682cff2f4fa53d42207e14f1-1747781194012.jpg" alt="What is Arbitrage Betting?" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 10 min read
-                </div>
-                <h2 class="article-title">What is Arbitrage Betting?</h2>
-                <p class="article-excerpt">Learn how arbitrage betting can guarantee profits by exploiting odds discrepancies across sportsbooks, ensuring low-risk gains.</p>
-            </div>
-        </a>
-        
-        <a href="what-is-positive-expected-value-in-sports-betting-how-expected-value-in-betting-is-calculated.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682cffa74fa53d42207e151d-1747781120585.jpg" alt="What is Positive Expected Value in Sports Betting? How Expected Value in Betting is Calculated" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">What is Positive Expected Value in Sports Betting? How Expected Value in Betting is Calculated</h2>
-                <p class="article-excerpt">Learn how to identify positive expected value (+EV) in sports betting to enhance your long-term profitability through smart analysis and strategy.</p>
-            </div>
-        </a>
-        
-        <a href="5-ways-historical-data-improves-betting-accuracy.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682cd0c74fa53d42207debeb-1747769548587.jpg" alt="5 Ways Historical Data Improves Betting Accuracy" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 12 min read
-                </div>
-                <h2 class="article-title">5 Ways Historical Data Improves Betting Accuracy</h2>
-                <p class="article-excerpt">Utilize historical data to enhance betting accuracy by 5-10% through team patterns, past matchups, and live betting strategies.</p>
-            </div>
-        </a>
-        
-        <a href="how-bookmaker-comparison-tools-improve-betting-roi.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682cd08b4fa53d42207debd1-1747769006847.jpg" alt="How Bookmaker Comparison Tools Improve Betting ROI" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 8 min read
-                </div>
-                <h2 class="article-title">How Bookmaker Comparison Tools Improve Betting ROI</h2>
-                <p class="article-excerpt">Learn how bookmaker comparison tools can enhance your betting strategy, improve odds, and boost your ROI with real-time insights.</p>
-            </div>
-        </a>
-        
-        <a href="analyzing-line-movement-with-historical-data.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682a8da95642a17d106f118d-1747658605845.jpg" alt="Analyzing Line Movement with Historical Data" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">Analyzing Line Movement with Historical Data</h2>
-                <p class="article-excerpt">Unlock the secrets of sports betting with historical line movement analysis to enhance your strategy and spot valuable betting opportunities.</p>
-            </div>
-        </a>
-        
-        <a href="how-dynamic-odds-algorithms-work.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/6829d3cb5642a17d106e1835-1747586849566.jpg" alt="How Dynamic Odds Algorithms Work" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 8 min read
-                </div>
-                <h2 class="article-title">How Dynamic Odds Algorithms Work</h2>
-                <p class="article-excerpt">Explore how dynamic odds algorithms leverage AI and real-time data to revolutionize sports betting with enhanced accuracy and engagement.</p>
-            </div>
-        </a>
-        
-        <a href="how-arbitrage-detection-software-works.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/6827e5045642a17d106c6ef8-1747571424276.jpg" alt="How Arbitrage Detection Software Works" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 8 min read
-                </div>
-                <h2 class="article-title">How Arbitrage Detection Software Works</h2>
-                <p class="article-excerpt">Learn how arbitrage detection software identifies risk-free betting opportunities by analyzing real-time odds across multiple sportsbooks.</p>
-            </div>
-        </a>
-        
-        <a href="ai-parlay-builder-how-it-works.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682695180209458b3ff509ad-1747413456362.jpg" alt="AI Parlay Builder: How It Works" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 10 min read
-                </div>
-                <h2 class="article-title">AI Parlay Builder: How It Works</h2>
-                <p class="article-excerpt">Explore how AI parlay builders enhance sports betting by analyzing data for better accuracy, real-time updates, and personalized recommendations.</p>
-            </div>
-        </a>
-        
-        <a href="line-shopping-vs-arbitrage-key-differences.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682546f00209458b3ff34faf-1747287990356.jpg" alt="Line Shopping vs. Arbitrage: Key Differences" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 14 min read
-                </div>
-                <h2 class="article-title">Line Shopping vs. Arbitrage: Key Differences</h2>
-                <p class="article-excerpt">Explore the differences between line shopping and arbitrage betting, including strategies, risks, profits, and essential tools for smarter betting.</p>
-            </div>
-        </a>
-        
-        <a href="predicting-line-movement-with-ai-models.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682546f00209458b3ff34fb0-1747283674528.jpg" alt="Predicting Line Movement with AI Models" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 10 min read
-                </div>
-                <h2 class="article-title">Predicting Line Movement with AI Models</h2>
-                <p class="article-excerpt">Explore how AI is revolutionizing sports betting by predicting line movements with unparalleled accuracy and speed.</p>
-            </div>
-        </a>
-        
-        <a href="from-data-to-dollars-turning-raw-stats-into-better-bets.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/6824190a59ff6128992242bd-1747200760519.jpg" alt="From Data to Dollars: Turning Raw Stats into Better Bets" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 12 min read
-                </div>
-                <h2 class="article-title">From Data to Dollars: Turning Raw Stats into Better Bets</h2>
-                <p class="article-excerpt">Learn how to leverage sports data for smarter betting strategies, from data sources to bankroll management, enhancing your betting success.</p>
-            </div>
-        </a>
-        
-        <a href="arbitrage-made-simple-profit-when-the-books-disagree.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/6824198359ff61289922440c-1747200637086.jpg" alt="Arbitrage Made Simple: Profit When the Books Disagree" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">Arbitrage Made Simple: Profit When the Books Disagree</h2>
-                <p class="article-excerpt">Learn how to profit from sports betting arbitrage by leveraging odds discrepancies across sportsbooks with effective strategies and tools.</p>
-            </div>
-        </a>
-        
-        <a href="the-future-of-sports-data-apis-ai-and-instant-insights.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682419fb59ff6128992244f8-1747200562355.jpg" alt="The Future of Sports Data: APIs, AI, and Instant Insights" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">The Future of Sports Data: APIs, AI, and Instant Insights</h2>
-                <p class="article-excerpt">Explore how AI and real-time data are revolutionizing sports betting with smarter predictions and faster insights for bettors.</p>
-            </div>
-        </a>
-        
-        <a href="ai-meets-sportsbooks-what-every-bettor-should-know.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/6824190b59ff6128992242c5-1747200344836.jpg" alt="AI Meets Sportsbooks: What Every Bettor Should Know" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">AI Meets Sportsbooks: What Every Bettor Should Know</h2>
-                <p class="article-excerpt">Explore how AI is revolutionizing sports betting with smarter predictions, dynamic odds, and enhanced risk management tools.</p>
-            </div>
-        </a>
-        
-        <a href="fantasy-props-vs-sportsbook-lines-finding-hidden-value.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/682419bf59ff61289922448b-1747200301426.jpg" alt="Fantasy Props vs. Sportsbook Lines: Finding Hidden Value" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 8 min read
-                </div>
-                <h2 class="article-title">Fantasy Props vs. Sportsbook Lines: Finding Hidden Value</h2>
-                <p class="article-excerpt">Explore how comparing fantasy props with sportsbook lines can reveal hidden betting opportunities and market inefficiencies.</p>
-            </div>
-        </a>
-        
-        <a href="expected-value-in-sports-betting-basics.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/6824158f59ff612899223abf-1747200212149.jpg" alt="Expected Value in Sports Betting: Basics" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 8 min read
-                </div>
-                <h2 class="article-title">Expected Value in Sports Betting: Basics</h2>
-                <p class="article-excerpt">Learn the fundamentals of Expected Value in sports betting to make informed decisions and enhance your long-term profitability.</p>
-            </div>
-        </a>
-        
-        <a href="5-common-sports-betting-mistakes-and-how-to-avoid-them.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/675d1cbb0f030fec2c32eeea-1734176407771.jpg" alt="5 Common Sports Betting Mistakes and How to Avoid Them" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 9 min read
-                </div>
-                <h2 class="article-title">5 Common Sports Betting Mistakes and How to Avoid Them</h2>
-                <p class="article-excerpt">Learn the top five sports betting mistakes and effective strategies to avoid them for a more successful betting experience.</p>
-            </div>
-        </a>
-        
-        <a href="sports-betting-bankroll-management-essential-tips.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/675d1c7f0f030fec2c32eea7-1734156490004.jpg" alt="Sports Betting Bankroll Management: Essential Tips" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 7 min read
-                </div>
-                <h2 class="article-title">Sports Betting Bankroll Management: Essential Tips</h2>
-                <p class="article-excerpt">Learn essential bankroll management tips for sports betting to protect your funds, minimize losses, and enhance long-term success.</p>
-            </div>
-        </a>
-        
-        <a href="7-best-sports-betting-arbitrage-strategies-for-2025.html" class="article-card">
-            <img src="https://assets.seobotai.com/cdn-cgi/image/quality=75,w=1536,h=1024/betterslip.com/675cdc830f030fec2c329de8-1734141519328.jpg" alt="7 Best Sports Betting Arbitrage Strategies for 2025" class="article-image">
-            <div class="article-content">
-                <div class="article-meta">
-                    Invalid Date
-                    • 10 min read
-                </div>
-                <h2 class="article-title">7 Best Sports Betting Arbitrage Strategies for 2025</h2>
-                <p class="article-excerpt">Explore effective sports betting arbitrage strategies for 2025, leveraging technology to ensure consistent, risk-free profits.</p>
-            </div>
-        </a>
-        
-    </div>
-    
-    <div class="footer-section">
-        <h2>Ready to Start Winning?</h2>
-        <p>Join BetterSlip and use our AI-powered tools to find profitable betting opportunities.</p>
-        <a href="https://betterslip.com" style="display: inline-block; background-color: #C5B358; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 500; margin-top: 20px;">Visit BetterSlip.com</a>
-    </div>
+        .category-filter:hover,
+        .category-filter.active {
+            background-color: #C5B358;
+            color: white;
+            border-color: #C5B358;
+        }
+
+        .blog-category {
+            display: block;
+        }
+    </style>
+
+    <script>
+        let articlesShown = 12;
+        const allArticles = [{"file":"advanced-hedging-multi-bet-optimization.html","title":"Advanced Hedging: Multi-Bet Optimization","description":"Explore advanced multi-bet optimization strategies to manage risks and enhance profits through dynamic hedging and mathematical models.","date":"2025-05-24","readTime":15,"category":"Technology & AI"},{"file":"kelly-criterion-in-dynamic-stake-models.html","title":"Kelly Criterion in Dynamic Stake Models","description":"Understanding how to apply the Kelly Criterion in dynamic betting environments with real-time data.","date":"2025-05-23","readTime":12,"category":"Technology & AI"},{"file":"how-latency-affects-arbitrage-opportunities.html","title":"How Latency Affects Arbitrage Opportunities","description":"Understanding how network latency and execution speed impact arbitrage betting success.","date":"2025-05-22","readTime":10,"category":"Arbitrage & Strategy"},{"file":"3-ways-to-analyze-historical-betting-trends.html","title":"3 Ways to Analyze Historical Betting Trends","description":"Discover three powerful methods for analyzing historical betting data to find profitable patterns.","date":"2025-05-22","readTime":10,"category":"Data Analysis & Tools"},{"file":"what-are-sports-book-odds-boosts-how-to-use-profit-boosts-at-sportsbooks.html","title":"What are Sports Book Odds Boosts?","description":"Understand how to identify and capitalize on profitable odds boosts and promotions.","date":"2025-05-22","readTime":8,"category":"Betting Fundamentals"},{"file":"time-series-analysis-for-live-odds.html","title":"Time Series Analysis for Live Odds","description":"Learn how time series analysis helps predict odds movements and identify optimal betting timing.","date":"2025-05-21","readTime":14,"category":"Technology & AI"},{"file":"what-is-arbitrage-betting.html","title":"What is Arbitrage Betting?","description":"A comprehensive guide to understanding and implementing arbitrage betting strategies for guaranteed profits.","date":"2025-05-20","readTime":8,"category":"Arbitrage & Strategy"},{"file":"5-ways-historical-data-improves-betting-accuracy.html","title":"5 Ways Historical Data Improves Betting Accuracy","description":"Learn how historical data analysis can significantly improve your betting decision-making process.","date":"2025-05-20","readTime":12,"category":"Data Analysis & Tools"},{"file":"how-bookmaker-comparison-tools-improve-betting-roi.html","title":"How Bookmaker Comparison Tools Improve Betting ROI","description":"Discover how odds comparison tools can significantly boost your return on investment.","date":"2025-05-20","readTime":11,"category":"Data Analysis & Tools"},{"file":"what-is-positive-expected-value-in-sports-betting-how-expected-value-in-betting-is-calculated.html","title":"What is Positive Expected Value in Sports Betting?","description":"Master the concept of expected value and learn how to calculate it for long-term betting success.","date":"2025-05-20","readTime":13,"category":"Betting Fundamentals"},{"file":"what-is-juice-in-sports-betting-how-to-calculate-juice-in-betting.html","title":"What is Juice in Sports Betting? How to Calculate Juice","description":"Learn about the sportsbook's built-in advantage and how to calculate and minimize juice.","date":"2025-05-20","readTime":9,"category":"Betting Fundamentals"},{"file":"analyzing-line-movement-with-historical-data.html","title":"Analyzing Line Movement with Historical Data","description":"Master the art of line movement analysis using comprehensive historical betting data.","date":"2025-05-19","readTime":14,"category":"Data Analysis & Tools"},{"file":"how-dynamic-odds-algorithms-work.html","title":"How Dynamic Odds Algorithms Work","description":"Deep dive into the algorithms that power real-time odds adjustments and market making.","date":"2025-05-18","readTime":16,"category":"Technology & AI"},{"file":"how-arbitrage-detection-software-works.html","title":"How Arbitrage Detection Software Works","description":"Learn the technology behind automated arbitrage detection and how to leverage it effectively.","date":"2025-05-18","readTime":11,"category":"Arbitrage & Strategy"},{"file":"ai-parlay-builder-how-it-works.html","title":"AI Parlay Builder: How It Works","description":"Discover how BetterSlip's AI analyzes correlations and builds optimal parlay combinations.","date":"2025-05-16","readTime":12,"category":"Technology & AI"},{"file":"predicting-line-movement-with-ai-models.html","title":"Predicting Line Movement with AI Models","description":"Explore how machine learning models can predict betting line movements before they happen.","date":"2025-05-15","readTime":18,"category":"Technology & AI"},{"file":"arbitrage-made-simple-profit-when-the-books-disagree.html","title":"Arbitrage Made Simple: Profit When the Books Disagree","description":"A beginner-friendly guide to understanding and executing arbitrage betting opportunities.","date":"2025-05-15","readTime":9,"category":"Arbitrage & Strategy"},{"file":"line-shopping-vs-arbitrage-key-differences.html","title":"Line Shopping vs. Arbitrage: Key Differences","description":"Understanding the distinction between line shopping and arbitrage betting strategies.","date":"2025-05-15","readTime":7,"category":"Arbitrage & Strategy"},{"file":"ai-meets-sportsbooks-what-every-bettor-should-know.html","title":"AI Meets Sportsbooks: What Every Bettor Should Know","description":"Understanding how artificial intelligence is transforming the sports betting landscape.","date":"2025-05-14","readTime":10,"category":"Technology & AI"},{"file":"the-future-of-sports-data-apis-ai-and-instant-insights.html","title":"The Future of Sports Data: APIs, AI, and Instant Insights","description":"Explore how modern sports data APIs and AI are creating new opportunities for smart bettors.","date":"2025-05-14","readTime":13,"category":"Technology & AI"},{"file":"from-data-to-dollars-turning-raw-stats-into-better-bets.html","title":"From Data to Dollars: Turning Raw Stats into Better Bets","description":"Learn how to transform raw sports statistics into profitable betting insights and strategies.","date":"2025-05-14","readTime":16,"category":"Data Analysis & Tools"},{"file":"expected-value-in-sports-betting-basics.html","title":"Expected Value in Sports Betting: Basics","description":"Understanding the fundamental concept of expected value for smarter betting decisions.","date":"2025-05-14","readTime":8,"category":"Betting Fundamentals"},{"file":"fantasy-props-vs-sportsbook-lines-finding-hidden-value.html","title":"Fantasy Props vs. Sportsbook Lines: Finding Hidden Value","description":"Discover how to compare fantasy sports pricing with sportsbook lines to find value.","date":"2025-05-14","readTime":11,"category":"Betting Fundamentals"},{"file":"7-best-sports-betting-arbitrage-strategies-for-2025.html","title":"7 Best Sports Betting Arbitrage Strategies for 2025","description":"Discover the most effective arbitrage strategies for consistent profits in modern betting markets.","date":"2024-12-14","readTime":15,"category":"Arbitrage & Strategy"},{"file":"sports-betting-bankroll-management-essential-tips.html","title":"Sports Betting Bankroll Management: Essential Tips","description":"Master the fundamentals of bankroll management for sustainable betting success.","date":"2024-12-14","readTime":12,"category":"Betting Fundamentals"},{"file":"5-common-sports-betting-mistakes-and-how-to-avoid-them.html","title":"5 Common Sports Betting Mistakes and How to Avoid Them","description":"Learn about the most common betting mistakes and proven strategies to avoid them.","date":"2024-12-14","readTime":10,"category":"Betting Fundamentals"},{"file":"statistical-analysis-betterslip.html","title":"Essential Statistical Analysis in Sports Betting: BetterSlip's Automated Approach","description":"Learn how BetterSlip automates complex statistical calculations for actionable insights.","date":"2024-03-01","readTime":18,"category":"BetterSlip Features"},{"file":"risk-management-betterslip.html","title":"Risk Management in Sports Betting: How BetterSlip Makes Smart Betting Safe","description":"Learn how BetterSlip's technology revolutionizes risk management in sports betting.","date":"2024-02-29","readTime":16,"category":"BetterSlip Features"},{"file":"ev-analysis-betterslip.html","title":"Understanding Expected Value in Sports Betting: BetterSlip's Open Source Approach","description":"Learn about our open source approach to calculating and identifying positive expected value.","date":"2024-02-28","readTime":20,"category":"BetterSlip Features"},{"file":"data-analysis-betterslip.html","title":"Inside BetterSlip's Massive Sports Betting Data Analysis Engine","description":"Discover how we process millions of betting opportunities daily using advanced algorithms.","date":"2024-02-27","readTime":18,"category":"BetterSlip Features"},{"file":"arbitrage-detection-betterslip.html","title":"Finding Guaranteed Profits: How BetterSlip's Arbitrage Detection Engine Works","description":"Discover how our sophisticated arbitrage detection system finds guaranteed profit opportunities.","date":"2024-02-26","readTime":15,"category":"BetterSlip Features"},{"file":"optimal-odds-finding-betterslip.html","title":"How BetterSlip's Optimal Odds Finding Works","description":"Discover how our system automatically scans and compares odds across multiple bookmakers.","date":"2024-02-25","readTime":12,"category":"BetterSlip Features"}];
+
+        function loadMoreArticles() {
+            const container = document.getElementById('articles-container');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            
+            const nextBatch = allArticles.slice(articlesShown, articlesShown + 12);
+            
+            nextBatch.forEach(article => {
+                const articleCard = createArticleCard(article);
+                container.innerHTML += articleCard;
+            });
+            
+            articlesShown += 12;
+            
+            if (articlesShown >= allArticles.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        }
+
+        function createArticleCard(article) {
+            return `
+                <a href="${article.file}" class="blog-card">
+                    <div class="blog-card-content">
+                        <div class="blog-category" style="color: #C5B358; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                            ${article.category}
+                        </div>
+                        <h3>${article.title}</h3>
+                        <p>${article.description}</p>
+                        <div class="blog-meta">${formatDate(article.date)} • ${article.readTime} min read</div>
+                    </div>
+                </a>
+            `;
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        }
+    </script>
 </body>
 </html>
