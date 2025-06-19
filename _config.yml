@@ -1,9 +1,8 @@
 # GitHub Pages Configuration
 title: BetterSlip - AI-Native Betting Copilot
 description: Official documentation and blog for BetterSlip - Your AI-powered sports betting platform
-url: https://dannybszn.github.io
-baseurl: /BetterSlip-
-theme: null
+url: https://docs.betterslip.com
+baseurl: ""
 
 # SEO and metadata
 author: BetterSlip Team
