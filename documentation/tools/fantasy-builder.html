@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Builder - Build Optimal DFS Lineups | BetterSlip Documentation</title>
+    <meta name="description" content="Build optimal DFS lineups with data-driven player analysis. Find props with the highest win probability for PrizePicks, Underdog, and 8+ DFS platforms.">
+    <meta name="keywords" content="fantasy builder, dfs optimizer, prizepicks builder, underdog fantasy, fantasy lineup builder, dfs lineups, player props, fantasy optimizer">
+    <link rel="icon" type="image/png" href="../../assets/icon.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="../../" class="nav-brand">
+                    <img src="../../assets/icon.png" alt="BetterSlip Logo" class="nav-logo">
+                    BetterSlip
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../../">Home</a></li>
+                    <li><a href="../../blog/">Blog</a></li>
+                    <li><a href="../">Documentation</a></li>
+                    <li><a href="https://betterslip.com" target="_blank" class="cta-link">Visit BetterSlip</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <input type="text" class="docs-search" placeholder="Search documentation...">
+            
+            <h3>Getting Started</h3>
+            <ul class="docs-nav">
+                <li><a href="../index.html">Overview</a></li>
+                <li><a href="../getting-started.html">Quick Start Guide</a></li>
+                <li><a href="../account-setup.html">Account Setup</a></li>
+                <li><a href="../first-bet.html">Your First Bet</a></li>
+            </ul>
+
+            <h3>Core Features</h3>
+            <ul class="docs-nav">
+                <li><a href="arbitrage.html">Arbitrage Finder</a></li>
+                <li><a href="positive-ev.html">Positive EV</a></li>
+                <li><a href="best-odds.html">Best Odds</a></li>
+                <li><a href="ai-parlay.html">AI Parlay Builder</a></li>
+                <li><a href="low-holds.html">Low Holds</a></li>
+                <li><a href="middles.html">Middles</a></li>
+                <li><a href="smart-money.html">Smart Money</a></li>
+                <li><a href="prop-trends.html">Prop Trends</a></li>
+                <li><a href="fantasy.html">Fantasy / DFS</a></li>
+            </ul>
+
+            <h3>Tools & Calculators</h3>
+            <ul class="docs-nav">
+                <li><a href="calculators.html">Betting Calculators</a></li>
+                <li><a href="bet-tracker.html">Bet Tracker</a></li>
+                <li><a href="promo-converter.html">Promo Converter</a></li>
+                <li><a href="parlay-shopper.html">Parlay Shopper</a></li>
+            </ul>
+
+            <h3>Advanced Features</h3>
+            <ul class="docs-nav">
+                <li><a href="../alerts.html">Alerts & Notifications</a></li>
+                <li><a href="../filters.html">Filters & Preferences</a></li>
+                <li><a href="../analytics.html">Analytics Dashboard</a></li>
+                <li><a href="../mobile-app.html">Mobile App</a></li>
+            </ul>
+
+            <h3>Account & Billing</h3>
+            <ul class="docs-nav">
+                <li><a href="../plans.html">Plans & Pricing</a></li>
+                <li><a href="../billing.html">Billing & Payments</a></li>
+                <li><a href="../account-settings.html">Account Settings</a></li>
+                <li><a href="../support.html">Support & FAQ</a></li>
+            </ul>
+        </aside>
+
+        <main class="docs-content">
+            <div class="breadcrumb">
+                <a href="../../">Home</a> / <a href="../">Documentation</a> / <a href="fantasy.html">Fantasy / DFS</a> / <a href="fantasy-builder.html">Fantasy Builder</a>
+            </div>
+
+            <h1>🔧 Fantasy Builder</h1>
+            
+            <div class="info-box">
+                <strong>Build Optimal Lineups:</strong> Find props with the highest win probability to build winning slips. Create data-driven DFS lineups with player correlations and projection analysis.
+            </div>
+
+            <h2>What is Fantasy Builder?</h2>
+            <p>The Fantasy Builder helps you build optimal DFS lineups by comparing Fantasy/DFS lines to sharp sportsbook odds every minute. We analyze millions of data points to identify which player props have the best mathematical edge, not gut feeling.</p>
+
+            <div class="warning-box">
+                <strong>⚡ Updated Every 5 Seconds:</strong> Our data refreshes constantly, so you always have the latest lines and projections. Never miss a line movement or new opportunity.
+            </div>
+
+            <h2>How Fantasy Builder Works</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>📊 Step 1: Select Your Platform</h4>
+                    <p>Choose from PrizePicks, Underdog, Betr Picks, Pick6, Dabble, and 5+ other DFS platforms. Each platform has different odds structures and break-even thresholds.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>🎯 Step 2: Find High-Probability Plays</h4>
+                    <p>See each player's win percentage calculated from sharp sportsbook odds. Props highlighted in green have mathematical edge (typically 54%+ win probability).</p>
+                </div>
+
+                <div class="feature-card">
+                    <h4>✅ Step 3: Build Your Slip</h4>
+                    <p>Add green plays to your slip. The tool calculates break-even thresholds for each platform's odds structure, so you know exactly which picks are profitable.</p>
+                </div>
+            </div>
+
+            <h2>Understanding the Color System</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card" style="border-left: 4px solid #4CAF50;">
+                    <h4>🟢 Green Plays</h4>
+                    <p>High-confidence plays with strong mathematical edge. These have win probabilities above the platform's break-even threshold (typically 54%+). Focus on these for the best results.</p>
+                </div>
+                <div class="feature-card" style="border-left: 4px solid #F59E0B;">
+                    <h4>🟡 Yellow Plays</h4>
+                    <p>Moderate edge opportunities. Can be mixed in to build larger slips while maintaining positive expected value.</p>
+                </div>
+            </div>
+
+            <h2>Break-Even Thresholds by Platform</h2>
+            <p>Each DFS platform has different odds structures. Here are the minimum win percentages needed to break even on 6-man insured plays:</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Odds</th>
+                        <th>Break-Even %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Underdog Fantasy</td>
+                        <td>-116</td>
+                        <td>53.7%</td>
+                    </tr>
+                    <tr>
+                        <td>PrizePicks</td>
+                        <td>-119</td>
+                        <td>54.3%</td>
+                    </tr>
+                    <tr>
+                        <td>Betr Picks</td>
+                        <td>-120</td>
+                        <td>54.5%</td>
+                    </tr>
+                    <tr>
+                        <td>Dabble</td>
+                        <td>-122</td>
+                        <td>55.0%</td>
+                    </tr>
+                    <tr>
+                        <td>Pick6</td>
+                        <td>-145</td>
+                        <td>59.2%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-box">
+                <strong>What This Means:</strong> On PrizePicks (-119 odds), you need each individual pick to hit at 54.3% or better to be profitable long-term. Our green plays exceed these thresholds.
+            </div>
+
+            <h2>Key Features</h2>
+
+            <ul>
+                <li><strong>Multi-Platform Support:</strong> Build slips for PrizePicks, Underdog, Betr Picks, Pick6, Dabble, and 5+ other platforms</li>
+                <li><strong>Real-Time Win Probabilities:</strong> See each player's win percentage calculated from sharp sportsbook odds</li>
+                <li><strong>Player Correlations:</strong> Understand which picks work well together</li>
+                <li><strong>Advanced Filtering:</strong> Filter by sport, league, player, or search for specific props</li>
+                <li><strong>Bet Slip Management:</strong> Build and track multiple slips across different platforms</li>
+                <li><strong>Color-Coded Edge:</strong> Green plays have strong mathematical edge, yellow plays have moderate edge</li>
+            </ul>
+
+            <h2>How to Use Fantasy Builder</h2>
+
+            <ol class="step-list">
+                <li><strong>Select Your Platform:</strong> Choose PrizePicks, Underdog, or any of the 8+ supported DFS platforms</li>
+                <li><strong>Choose Pick Type:</strong> Select 2-pick, 3-pick, 4-pick, 5-pick, or 6-pick flex plays based on your risk tolerance</li>
+                <li><strong>Filter Props:</strong> Use search, sport, and league filters to find the props you want</li>
+                <li><strong>Add Green Plays:</strong> Click on props highlighted in green to add them to your slip</li>
+                <li><strong>Review Your Slip:</strong> Check the total win probability and payout for your combination</li>
+                <li><strong>Build Your Slip:</strong> Once satisfied, build your slip on the DFS platform</li>
+            </ol>
+
+            <h2>Player Correlations</h2>
+            <p>One of the most powerful features of Fantasy Builder is understanding player correlations. If one player hits their prop, correlated players are more likely to hit too. For example:</p>
+            <ul>
+                <li><strong>Same Team Correlations:</strong> If a quarterback throws for over on passing yards, his receivers are more likely to hit over on receiving yards</li>
+                <li><strong>Game Script Correlations:</strong> If a team is winning big, their running back is more likely to hit over on rushing yards</li>
+                <li><strong>Opponent Matchups:</strong> If a defense is weak against the pass, multiple receivers from the opposing team may hit over</li>
+            </ul>
+
+            <h2>Fantasy Builder FAQ</h2>
+
+            <div class="feature-card">
+                <h4>How does Fantasy Builder calculate win probabilities?</h4>
+                <p>We compare Fantasy/DFS lines to sharp sportsbook odds every minute. By analyzing millions of data points, we calculate the true win probability for each prop based on market consensus from sharp books like Pinnacle and Circa.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>What do the colors mean?</h4>
+                <p>Green indicates high-confidence plays with strong mathematical edge (typically 54%+ win probability). Yellow shows moderate edge opportunities. Focus on green plays for the best results, but you can mix in yellow to build larger slips while maintaining positive expected value.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>How many picks should I put in my slip?</h4>
+                <p>This depends on the platform. 2-3 pick slips are easier to hit but have lower payouts. 5-6 pick flex plays on PrizePicks offer 10-25x payouts but require ~55%+ hit rate per pick to be profitable. Our optimizer shows you which slip sizes are most profitable for each book.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>Do I need sports knowledge to use this?</h4>
+                <p>No! That's the beauty of data-driven betting. Just bet the plays highlighted in green and you're good to go. The math does the work—you don't need to know anything about the players or teams.</p>
+            </div>
+
+            <div class="feature-card">
+                <h4>How often is the data updated?</h4>
+                <p>Our data refreshes every few seconds, so you always have the latest lines and projections. This ensures you never miss a line movement or new opportunity.</p>
+            </div>
+
+            <h2>Best Practices</h2>
+
+            <ol class="step-list">
+                <li><strong>Start with Green Plays:</strong> Focus on props highlighted in green for the strongest mathematical edge</li>
+                <li><strong>Consider Correlations:</strong> Use player correlations to build stronger slips—if one hits, correlated players are more likely to hit too</li>
+                <li><strong>Manage Bankroll:</strong> Risk 1-2% of your bankroll per play. If you have $1,000, bet $10-20 per slip</li>
+                <li><strong>Track Performance:</strong> Monitor which types of props and correlations work best for you</li>
+                <li><strong>Act Quickly:</strong> Lines move fast. When you see a green play, add it to your slip quickly before the line adjusts</li>
+            </ol>
+
+            <div class="warning-box">
+                <strong>Important:</strong> While our tools identify mathematically advantageous plays, individual bets can still lose due to variance. Use proper bankroll management and don't bet more than you can afford to lose.
+            </div>
+
+            <div class="cta-section">
+                <h3>Ready to Build Winning Slips?</h3>
+                <p>Join thousands of DFS players using Fantasy Builder to find value, build better lineups, and cash more slips. See how smart bettors are winning with data-driven picks.</p>
+                <a href="https://betterslip.com/tools/fantasy/builder" class="cta-button" target="_blank">Open Fantasy Builder</a>
+            </div>
+
+            <div class="docs-footer-nav">
+                <a href="fantasy.html">← Back to Fantasy / DFS</a>
+                <a href="fantasy-middles.html">Next: Fantasy Middles →</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BetterSlip</h3>
+                    <p>Your AI-Native Betting Copilot for smarter sports betting decisions.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BetterSlip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

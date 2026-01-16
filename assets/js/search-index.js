@@ -81,6 +81,24 @@ const SEARCH_INDEX = [
         url: "/documentation/tools/fantasy.html",
         category: "Core Features"
     },
+    {
+        title: "Fantasy Builder",
+        content: "Build optimal DFS lineups with data-driven player analysis. Find props with the highest win probability for PrizePicks, Underdog, and 8+ DFS platforms. See each player's win percentage calculated from sharp sportsbook odds.",
+        url: "/documentation/tools/fantasy-builder.html",
+        category: "Core Features"
+    },
+    {
+        title: "Fantasy Middles",
+        content: "Find middling opportunities across DFS platforms for reduced-risk plays. Spot line discrepancies between PrizePicks, Underdog, and other DFS sites. When one platform has Over 25.5 and another has Under 27.5, you've found a middle.",
+        url: "/documentation/tools/fantasy-middles.html",
+        category: "Core Features"
+    },
+    {
+        title: "Fantasy Outliers",
+        content: "Find DFS lines that differ significantly from sharp sportsbook averages. Spot projection outliers and mispriced player props across PrizePicks, Underdog, and other DFS sites. Identify mispriced projections for maximum value.",
+        url: "/documentation/tools/fantasy-outliers.html",
+        category: "Core Features"
+    },
     
     // Tools & Calculators
     {
