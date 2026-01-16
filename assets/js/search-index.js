@@ -63,6 +63,24 @@ const SEARCH_INDEX = [
         url: "/documentation/tools/middles.html",
         category: "Core Features"
     },
+    {
+        title: "Smart Money",
+        content: "Track where professional bettors and syndicates are putting their money. Tail smart money picks at the best available odds across 90+ sportsbooks.",
+        url: "/documentation/tools/smart-money.html",
+        category: "Core Features"
+    },
+    {
+        title: "Prop Trends",
+        content: "Track historical player performance, calculate hit rates, and monitor live progress across 90+ sportsbooks to find the best prop bets based on real data.",
+        url: "/documentation/tools/prop-trends.html",
+        category: "Core Features"
+    },
+    {
+        title: "Fantasy / DFS Tools",
+        content: "Professional Fantasy & DFS tools for PrizePicks, Underdog, and 8+ platforms. Build optimal lineups with Fantasy Builder, find middling opportunities with Fantasy Middles, and spot outlier projections with Fantasy Outliers. Data-driven picks with 57%+ average hit rate on green plays.",
+        url: "/documentation/tools/fantasy.html",
+        category: "Core Features"
+    },
     
     // Tools & Calculators
     {
