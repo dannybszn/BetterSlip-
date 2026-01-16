@@ -41,7 +41,7 @@ const SEARCH_INDEX = [
     },
     {
         title: "Best Odds",
-        content: "Compare odds across 80+ sportsbooks to always get the best price on your bets. Maximize returns on every wager.",
+        content: "Compare odds across 90+ sportsbooks to always get the best price on your bets. Maximize returns on every wager.",
         url: "/documentation/tools/best-odds.html",
         category: "Core Features"
     },
