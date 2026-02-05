@@ -145,7 +145,7 @@ Our users consistently outperform the market:
 - Limited +EV opportunities
 - Email support
 
-### Professional - $99/month
+### Professional - $79/month
 - Unlimited arbitrage scanning
 - Advanced +EV finder
 - AI parlay builder
